@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --red:rgba(160, 27, 27, 0.849);
+    --second_red:rgba(202, 37, 37, 0.849);
+    --blue:#4485f6;
+}
+.nav{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: rgb(0 0 0 / 16%) 0 2px 2px 0;
+}
+.logo a{
+    color: black;
+    font-family: 'Fjalla One', sans-serif !important;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+}
+.bfname{
+    color:var(--red);
+}
+.main-search{
+    width: 40%;
+    position: relative;
+}
+#search{
+    display: block;
+    width: 100%;
+    height:42px;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #c2c8ce;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out;
+    box-shadow: rgb(0 0 0 / 16%) 0 2px 2px 0, rgb(0 0 0 / 8%) 0 0 0 1px;
+    outline: none;
+}
+.search-form button{
+    font-size: 22px;
+    overflow: visible;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 40px;
+    width: 46px;
+    color: var(--blue);
+    background: none;
+}
+#search:focus{
+    box-shadow: var(--second_red) 0 2px 2px 0,var(--second_red) 0 0 0 1px;
+
+}
+.search-form button:hover{
+    color:var(--red);
+}
+.menu{
+    /* width: 30%; */
+    text-align: center;
+}      
+.menu p,button,a{
+    font-family: 'Fjalla One', sans-serif;
+    outline: none !important;
+    font-size: 22px;
+    color:var(--blue);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;        
+}
+.dropdown-menu{
+    position: absolute !important;
+}
+
+@media screen and (max-width:768px){
+   .navbar{
+       display: block;
+       width: 100%;
+       position: relative;
+   }
+    .logo{
+        position: absolute;
+        top: 8px;
+        right: 3px;
+    }
+
+   .main-search{
+       display: flex;
+       justify-content: center;
+       top: 70px;
+       width: 100%;
+       position: relative;
+   }
+
+   .search{
+       width: 70%;
+       margin: 0%;
+       position: relative;
+   }
+   #search{
+       width: 100%;
+   }
+   .search-form button{
+    font-size: 16px;
+}
+
+   .menu{
+    position: absolute;
+    top: 7px;
+    left: 1px;
+    
+   }
+    
+    .menu p,button,a{
+        font-size: 16px;
+    }
+}
